@@ -1,0 +1,21 @@
+CREATE TABLE knicks (id INTEGER, player TEXT, position TEXT, number INTEGER, rating INTEGER);
+
+INSERT INTO knicks VALUES (1, "Obi Toppin", "PF", 1, 6);
+INSERT INTO knicks VALUES (2, "RJ Barret", "SF", 9, 9);
+INSERT INTO knicks VALUES (3, "Julius Randle", "PF", 30, 3);
+INSERT INTO knicks VALUES (4, "IQ", "PG", 5, 7);
+INSERT INTO knicks VALUES (5, "Mitchell Robinson","C", 23, 7);
+INSERT INTO knicks VALUES (6, "Derek Rose", "PG", 4, 7);
+INSERT INTO knicks VALUES (7, "Cam Reddish", "SF", 21, 4);
+INSERT INTO knicks VALUES (8, "Quentin Grimes", "SG", 6, 6);
+INSERT INTO knicks VALUES (9, "Evan Fornier", "SG", 13, 5);
+INSERT INTO knicks VALUES (10, "Jericho Sims", "C", 45, 5);
+INSERT INTO knicks VALUES (11, "Deuce McBride", "PG", 2, 6);
+INSERT INTO knicks VALUES (12, "Feron Hunt", "SF", 16, 2);
+INSERT INTO knicks VALUES (13, "Jalen Brunson", "PG", 11, 9);
+INSERT INTO knicks VALUES (14, "Trevor Keels", "SG", 3, 3);
+INSERT INTO knicks VALUES (15, "Hartenstein", "C", 55, 6);
+
+SELECT * FROM knicks;
+
+SELECT * FROM knicks WHERE number ORDER BY number > 44;
