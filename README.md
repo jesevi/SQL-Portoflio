@@ -1,3 +1,3 @@
-# SQL-Portoflio
+# Jason Sevilla SQL-Portoflio
 
-I'll be adding SQL projects I've been working along with many other things related to SQL
+## Welcome to my SQL Portfolio! This code respository contains examples of SQLs I've written. Feel free to take a look and reach out via email if you have any questions: jesevillaescobar@gmail.com
