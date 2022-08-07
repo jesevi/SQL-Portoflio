@@ -1,24 +1,26 @@
 /* Create table about the people and what they do here */
 CREATE TABLE rmcfplayers(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, number INTEGER, country TEXT, position TEXT);
 
-INSERT INTO rmcfplayers VALUES (1, 'Karim Benzema', 9, "France", "Striker");
-INSERT INTO rmcfplayers VALUES (2, 'Luka Modric', 10, "Croatia", "midfield");
-INSERT INTO rmcfplayers VALUES (3, 'Toni Kroos', 8, "Germany", "midfield");
-INSERT INTO rmcfplayers VALUES (4, 'Vinicius Jr', 20, "Brazil", "winger");
-INSERT INTO rmcfplayers VALUES (5, "Camavinga", 25, "France", "midfield");
-INSERT INTO rmcfplayers VALUES (6, "Courtious", 1, "Belgium", "goalkeeper");
-INSERT INTO rmcfplayers VALUES (7, "Hazard", 7, "Belgium", "winger");
-INSERT INTO rmcfplayers VALUES (8, "Camavinga", 25, "France", "midfield");
+INSERT INTO rmcfplayers(name, number, country, position) VALUES ('Karim Benzema', 9, "France", "Striker");
+INSERT INTO rmcfplayers(name, number, country, position) VALUES ('Luka Modric', 10, "Croatia", "midfield");
+INSERT INTO rmcfplayers(name, number, country, position) VALUES ('Toni Kroos', 8, "Germany", "midfield");
+INSERT INTO rmcfplayers(name, number, country, position) VALUES ('Vinicius Jr', 20, "Brazil", "winger");
+INSERT INTO rmcfplayers(name, number, country, position) VALUES ("Camavinga", 25, "France", "midfield");
+INSERT INTO rmcfplayers(name, number, country, position) VALUES ("Courtious", 1, "Belgium", "goalkeeper");
+INSERT INTO rmcfplayers(name, number, country, position) VALUES ("Hazard", 7, "Belgium", "winger");
+INSERT INTO rmcfplayers(name, number, country, position) VALUES ("Camavinga", 25, "France", "midfield");
 
 CREATE TABLE nationalteams (id INTEGER PRIMARY KEY AUTOINCREMENT, country TEXT);
 
-INSERT INTO nationalteams VALUES (1, "France");
-INSERT INTO nationalteams VALUES (2, "Brazil");
-INSERT INTO nationalteams VALUES (3, "Germany");
-INSERT INTO nationalteams VALUES (4, "Croatia");
-INSERT INTO nationalteams VALUES (5, "Belgium");
+INSERT INTO nationalteams(country) VALUES ("France");
+INSERT INTO nationalteams(country) VALUES ("Brazil");
+INSERT INTO nationalteams(country) VALUES ("Germany");
+INSERT INTO nationalteams(country) VALUES ("Croatia");
+INSERT INTO nationalteams(country)VALUES ("Belgium");
 
-SELECT rmcfplayers.name, nationalteams.country
+SELECT rmcfplayers.name, nationalteams.country, rmcfplayers.number
 FROM rmcfplayers
 JOIN nationalteams
-ON rmcfplayers.id = nationalteams.id;
+ON rmcfplayers.country = nationalteams.country;
+
+select * from rmcfplayers
