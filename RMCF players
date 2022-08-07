@@ -10,5 +10,15 @@ INSERT INTO rmcfplayers VALUES (6, "Courtious", 1, "Belgium", "goalkeeper");
 INSERT INTO rmcfplayers VALUES (7, "Hazard", 7, "Belgium", "winger");
 INSERT INTO rmcfplayers VALUES (8, "Camavinga", 25, "France", "midfield");
 
-CREATE TABLE nationalteams (id INTEGER PRIMARY KEY AUTOINCREMENT, country TEXT, number INTEGER);
+CREATE TABLE nationalteams (id INTEGER PRIMARY KEY AUTOINCREMENT, country TEXT);
 
+INSERT INTO nationalteams VALUES (1, "France");
+INSERT INTO nationalteams VALUES (2, "Brazil");
+INSERT INTO nationalteams VALUES (3, "Germany");
+INSERT INTO nationalteams VALUES (4, "Croatia");
+INSERT INTO nationalteams VALUES (5, "Belgium");
+
+SELECT rmcfplayers.name, nationalteams.country
+FROM rmcfplayers
+JOIN nationalteams
+ON rmcfplayers.id = nationalteams.id;
