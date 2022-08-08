@@ -1,1 +1,8 @@
   
+Getting started, take a look at the startups table:
+
+SELECT *
+FROM startups;
+How many columns are there? 
+
+-- 
