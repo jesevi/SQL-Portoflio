@@ -5,4 +5,87 @@ SELECT *
 FROM startups;
 How many columns are there? 
 
--- 
+-- 10
+
+
+Calculate the total number of companies in the table.
+
+SELECT COUNT(name)
+FROM startups;
+  
+-- 70 
+
+We want to know the total value of all companies in this table.
+
+Calculate this by getting the SUM() of the valuation column.
+
+SELECT SUM(valuation)
+FROM startups;
+
+--974455790000
+
+
+What is the highest amount raised by a startup?
+
+Return the maximum amount of money raised.
+
+SELECT MAX(raised) FROM startups;
+
+-- 11500000000
+
+Edit the query so that it returns the maximum amount of money raised, during ‘Seed’ stage.
+
+SELECT MAX(raised) 
+FROM startups
+WHERE stage = 'Seed';
+
+-- 1800000
+
+
+In what year was the oldest company on the list founded?
+
+SELECT MIN(founded)
+FROM startups;
+
+-- 1994
+
+Return the average valuation.
+
+SELECT AVG(valuation)
+FROM startups;
+
+--15974685081.9672
+
+
+Return the average valuation, in each category.
+
+SELECT AVG(valuation), category
+FROM startups
+GROUP BY category;
+
+Return the average valuation, in each category.
+
+Round the averages to two decimal places.
+
+SELECT category, ROUND(AVG(valuation), 2)
+FROM startups
+GROUP BY category;
+
+
+Return the average valuation, in each category.
+
+Round the averages to two decimal places.
+
+Lastly, order the list from highest averages to lowes
+
+SELECT category, ROUND(AVG(valuation), 2)
+FROM startups
+GROUP BY 1
+ORDER BY 2 DESC;
+
+
+First, return the name of each category with the total number of companies that belong to it.
+
+SELECT category, COUNT(*)
+FROM startups
+GROUP BY category;
