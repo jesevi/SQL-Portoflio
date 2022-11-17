@@ -46,3 +46,10 @@ join province_names ON province_names.province_id = patients.province_id;
 SELECT COUNT(*)
 FROM patients
 WHERE YEAR(birth_date) = 2010;
+
+8. Show the first_name, last_name, and height of the patient with the greatest height.
+
+select first_name,
+last_name,
+MAX(height)
+FROM patients;
