@@ -60,8 +60,26 @@ SELECT *
 FROM patients
 WHERE patient_id IN (1,45,534,879,1000);
 
-10. Show first name, last name, and gender of patients who's gender is 'M'
+10. Show the total number of admissions
 
-select first_name, last_name, gender
-FROM patients
-WHERE gender IS 'M';
+SELECT count(*) 
+FROM admissions
+
+11/18
+
+11. Show all the columns from admissions where the patient was admitted and discharged on the same day.
+
+SELECT * 
+FROM admissions
+WHERE admission_date = discharge_date;
+
+12. Show the total number of admissions for patient_id 579.
+
+SELECT patient_id, 
+COUNT(*) as total_admissions
+FROM admissions
+WHERE patient_id IS 579;
+
+13. Based on the cities that our patients live in, show unique cities that are in province_id 'NS'?
+
+
